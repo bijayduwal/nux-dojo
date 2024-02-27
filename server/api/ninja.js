@@ -1,17 +1,8 @@
-export default defineEventHandler(async (event) => {
-
-    // handle query params
-    //const { name } = useQuery(event)
-
-    // handle post data
-  // const { age } = await useBody()
-
+export default defineEventHandler( async(event) => {
     // api call with private key
-    const { data } = await $fetch('https://api.currencyapi.com/v3/latest?apikey=eJdPhICJUDBt6B4e4IX6DZ4A9Xos4Z2JRZ8xh2v2')
+   const { data } = await $fetch('https://api.currencyapi.com/v3/latest?apikey=cur_live_pttVbWdXtuQK89KVe9PjNJyRARF2g1ROTY98nnCQ')
+   console.log(data.value, "data value");
 
-    return data;
 
-    return {
-        message: `Hello, ${name}! Your are ${age} years old.`
-    }
+   return data;
 })
